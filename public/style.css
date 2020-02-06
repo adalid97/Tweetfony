@@ -84,3 +84,39 @@ body {
     color: #14171a;
     text-decoration: none;
 }
+
+.singleTweet {
+    padding-left: 120px;
+    margin-top: 50px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.singleTweet .mensaje {
+    font-size: 27px;
+    line-height: 32px;
+    letter-spacing: .01em;
+}
+
+.singleTweet .avatarBig {
+    transition: box-shadow .15s ease-in-out;
+    -moz-force-broken-image-icon: 1;
+    border-radius: 50%;
+    background: #fff;
+    border: 5px solid #fff;
+    border-radius: 50%;
+    height: 200px;
+    position: absolute;
+    width: 200px;
+    margin-left: -210px;
+    margin-top: -30px;
+}
+
+
+.singleTweet a {
+    color: #14171a;
+    text-decoration: none;
+}
+.singleTweet .cabecera {
+    color: #657786;
+    font-size: 20px;
+}

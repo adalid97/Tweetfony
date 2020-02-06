@@ -1,0 +1,28 @@
+{% extends "base.html.twig" %}
+{% block titulo %}Demo{{ parent() }}
+{% endblock %}
+{% block principal %}
+{% for tweet in tweets %}
+	<ul class="tweetline">
+		<li class='tweet'>
+			<div class="contenido">
+				<div class="cabecera">
+				
+					<a href="{{ path('verTweet', {'id': tweet.id}) }}">
+						<img class="avatarSmall" src="{{ asset('images/avatars/' ~tweet.user.userName~'-small.jpg') }}"/>
+						<strong>{{ tweet.user.name }}</strong>
+						<span>@{{tweet.user.userName}}</span>
+					</a>
+							
+					<small class="time">{{ tweet.date|date("d/m/Y H:m:s") }}</small>
+				</div>
+				<div class="mensaje">{{ tweet.text|truncate(80) }}</div>
+				<div class="likes">{{ tweet.likes|length }} 👍</div>
+			</div>
+		</li>
+	{% else %}
+		<p>No hay tweet</p>
+	{% endfor %}
+</ul>{% endblock %}
+
+{# Comentario #}

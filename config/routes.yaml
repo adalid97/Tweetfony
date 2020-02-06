@@ -1,3 +1,15 @@
-#index:
-#    path: /
-#    controller: App\Controller\DefaultController::index
+demo_index:
+    path: /demo
+    controller: App\Controller\TweetController::demo
+
+demo_tweet:
+    path: /demoTweet
+    controller: App\Controller\TweetController::demoTweet
+
+tweets:
+    path: /
+    controller: App\Controller\TweetController::tweets
+
+verTweet:
+  path: /{id}
+  controller: App\Controller\TweetController::verTweet

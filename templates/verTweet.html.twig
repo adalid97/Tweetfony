@@ -1,0 +1,16 @@
+{% extends "base.html.twig" %}
+{% block titulo %}Bill Gates: The future is bright for the world’s poorest... {{ parent() }}{% endblock %}
+{% block principal %}
+    <div class="singleTweet">
+        <div class="cabecera">
+            <a href="{{ path('demo_tweet') }}">
+                <img class="avatarBig" src="{{ asset('images/avatars/' ~tweet.user.userName~'-big.jpg') }}" />
+                <strong>{{ tweet.user.name }}s</strong>
+                <span>@{{ tweet.user.userName }}</span>
+            </a>
+            <small class="time">{{ tweet.date|date("d/m/Y H:m:s") }}</small>
+        </div>
+        <div class="mensaje">{{ tweet.text }}</div>
+        <div class="likes">{{ tweet.likes|length }}👍</div>
+    </div>
+{% endblock %}
