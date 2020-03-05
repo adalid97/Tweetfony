@@ -36,10 +36,4 @@ class TweetController extends AbstractController
         ));
     }
 
-
-   
-
-
-
 }
-
